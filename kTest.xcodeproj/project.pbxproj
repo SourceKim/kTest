@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B46751020D81C240013F53D /* KVBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B46750F20D81C240013F53D /* KVBox.m */; };
 		3BA1DC0B20D6B25800AFD37C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA1DC0A20D6B25800AFD37C /* AppDelegate.m */; };
 		3BA1DC0E20D6B25800AFD37C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA1DC0D20D6B25800AFD37C /* ViewController.m */; };
 		3BA1DC1120D6B25800AFD37C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BA1DC0F20D6B25800AFD37C /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B46750E20D81C240013F53D /* KVBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVBox.h; sourceTree = "<group>"; };
+		3B46750F20D81C240013F53D /* KVBox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVBox.m; sourceTree = "<group>"; };
 		3BA1DC0620D6B25800AFD37C /* kTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA1DC0920D6B25800AFD37C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3BA1DC0A20D6B25800AFD37C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -45,6 +48,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B46750D20D81BFC0013F53D /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				3B46750E20D81C240013F53D /* KVBox.h */,
+				3B46750F20D81C240013F53D /* KVBox.m */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		3BA1DBFD20D6B25800AFD37C = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +76,7 @@
 		3BA1DC0820D6B25800AFD37C /* kTest */ = {
 			isa = PBXGroup;
 			children = (
+				3B46750D20D81BFC0013F53D /* New Group */,
 				3BA1DC1F20D6B27700AFD37C /* LoadTest */,
 				3BA1DC0920D6B25800AFD37C /* AppDelegate.h */,
 				3BA1DC0A20D6B25800AFD37C /* AppDelegate.m */,
@@ -160,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B46751020D81C240013F53D /* KVBox.m in Sources */,
 				3BA1DC2220D6B29300AFD37C /* User.m in Sources */,
 				3BA1DC0E20D6B25800AFD37C /* ViewController.m in Sources */,
 				3BA1DC1920D6B25800AFD37C /* main.m in Sources */,
