@@ -10,4 +10,12 @@
 
 @implementation SuperUser
 
++ (void)load {
+    NSLog(@"Loading sub-class `SuperUser`....");
+}
+
++ (void)initialize {
+    NSLog(@"Initializing sub-class `SuperUser`...");
+}
+
 @end

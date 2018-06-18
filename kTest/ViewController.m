@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "User.h"
+#import "SuperUser.h"
 
 @interface ViewController ()
 
@@ -16,9 +18,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    [self loadTest];
 }
 
+- (void)loadTest {
+    User *user = [[User alloc] init]; // 在使用的时候才会被加载
+    User *user2 = [[User alloc] init]; // 第二次使用不会被加载
+//    SuperUser *superUser = [[SuperUser alloc] init];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

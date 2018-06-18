@@ -14,4 +14,8 @@
     NSLog(@"Loading class `User`....");
 }
 
++ (void)initialize {
+    NSLog(@"Initializing class `User`...");
+}
+
 @end
