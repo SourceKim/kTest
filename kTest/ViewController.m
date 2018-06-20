@@ -7,14 +7,18 @@
 //
 
 #import "ViewController.h"
-#import "User.h"
-#import "SuperUser.h"
 
 #import <objc/runtime.h>
+
+#import "User.h"
+#import "SuperUser.h"
+#import "KVBox.h"
 
 @interface ViewController () {
     int _time;
     NSTimer *_timer;
+
+    KVBox *_box;
 }
 
 @end
@@ -26,9 +30,25 @@
 
 //    [self loadTest];
     
-    [self addScroll];
-    [self setTimer];
+//    [self addScroll];
+//    [self setTimer];
 
+    _box = [[KVBox alloc] init];
+
+    NSLog(@"Adding observer...");
+
+    [_box addObserver:self
+           forKeyPath:@"color"
+              options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+              context:@"color of box"];
+
+    NSLog(@"Changing value by setValue forKey...");
+    [_box setValue:[UIColor blueColor] forKey:@"color"]; // KVC
+
+    NSLog(@"Changing value by setValue forKeyPath......");
+    [_box setValue:@"kim" forKeyPath:@"maker.makerName"]; // KVC
+
+    NSLog(@"maker name: %@", [[_box valueForKey:@"maker"] valueForKey:@"makerName"]);
 }
 
 # pragma mark - 验证 load & initialize
@@ -68,10 +88,20 @@
     _time++;
 }
 
+#pragma mark - KVO
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    UIColor *old = change[NSKeyValueChangeOldKey];
+    UIColor *new = change[NSKeyValueChangeNewKey];
+    NSLog(@"%@ has changed. old: %@, new: %@", keyPath, old, new);
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    [_box removeObserver:self forKeyPath:@"color"];
+}
 
 @end

@@ -16,6 +16,7 @@
 		3BA1DC1920D6B25800AFD37C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA1DC1820D6B25800AFD37C /* main.m */; };
 		3BA1DC2220D6B29300AFD37C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA1DC2120D6B29300AFD37C /* User.m */; };
 		3BA1DC2520D6B2F600AFD37C /* SuperUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA1DC2420D6B2F600AFD37C /* SuperUser.m */; };
+		3BE1BB9120DA9CDB007BD695 /* KVBoxMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1BB9020DA9CDB007BD695 /* KVBoxMaker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		3BA1DC2120D6B29300AFD37C /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		3BA1DC2320D6B2F600AFD37C /* SuperUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperUser.h; sourceTree = "<group>"; };
 		3BA1DC2420D6B2F600AFD37C /* SuperUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperUser.m; sourceTree = "<group>"; };
+		3BE1BB8F20DA9CDB007BD695 /* KVBoxMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVBoxMaker.h; sourceTree = "<group>"; };
+		3BE1BB9020DA9CDB007BD695 /* KVBoxMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVBoxMaker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,13 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B46750D20D81BFC0013F53D /* New Group */ = {
+		3B46750D20D81BFC0013F53D /* KVModel */ = {
 			isa = PBXGroup;
 			children = (
 				3B46750E20D81C240013F53D /* KVBox.h */,
 				3B46750F20D81C240013F53D /* KVBox.m */,
+				3BE1BB8F20DA9CDB007BD695 /* KVBoxMaker.h */,
+				3BE1BB9020DA9CDB007BD695 /* KVBoxMaker.m */,
 			);
-			path = "New Group";
+			path = KVModel;
 			sourceTree = "<group>";
 		};
 		3BA1DBFD20D6B25800AFD37C = {
@@ -76,7 +81,7 @@
 		3BA1DC0820D6B25800AFD37C /* kTest */ = {
 			isa = PBXGroup;
 			children = (
-				3B46750D20D81BFC0013F53D /* New Group */,
+				3B46750D20D81BFC0013F53D /* KVModel */,
 				3BA1DC1F20D6B27700AFD37C /* LoadTest */,
 				3BA1DC0920D6B25800AFD37C /* AppDelegate.h */,
 				3BA1DC0A20D6B25800AFD37C /* AppDelegate.m */,
@@ -174,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B46751020D81C240013F53D /* KVBox.m in Sources */,
+				3BE1BB9120DA9CDB007BD695 /* KVBoxMaker.m in Sources */,
 				3BA1DC2220D6B29300AFD37C /* User.m in Sources */,
 				3BA1DC0E20D6B25800AFD37C /* ViewController.m in Sources */,
 				3BA1DC1920D6B25800AFD37C /* main.m in Sources */,
